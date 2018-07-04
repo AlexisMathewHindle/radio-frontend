@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -15,8 +14,9 @@ import {
 } from 'angular-6-social-login';
 
 import { FilterPipe } from './filter.pipe';
-
 import { AppRouting } from './app.routing';
+import { routerTransition } from './router.animations';
+
 import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -90,4 +90,4 @@ export function getAuthServiceConfigs() {
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

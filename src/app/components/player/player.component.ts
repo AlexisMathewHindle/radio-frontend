@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { routerTransition } from '../../router.animations';
+
 import { AddService } from '../../services/add.service';
 import { MusicGraphService } from '../../services/music-graph.service';
 
@@ -23,7 +25,7 @@ export class PlayerComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log('Artist service', this.addTrack.addTrack())
+    console.log(routerTransition, 'router');
     this.getArtist();
     // this.artist.artistTitle.push(this.addTrack.addTrackTitle);
 

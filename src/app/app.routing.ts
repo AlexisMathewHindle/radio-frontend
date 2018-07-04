@@ -14,23 +14,28 @@ const routes = [
   },
   {
     path: 'player',
-    component: PlayerComponent
+    component: PlayerComponent,
+    data: { state: 'player'}
   },
   {
     path: 'shoutout',
-    component: ShoutoutComponent
+    component: ShoutoutComponent,
+    data: { state: 'shoutout'}
   },
   {
     path: 'search',
     component: SearchComponent
+    data: { state: 'search'}
   },
   {
     path: 'admin',
     component: AdminComponent,
+    data: { state: 'admin'}
   },
   {
     path: 'login',
     component: LoginComponent,
+    data: { state: 'login'}
   }
 ];
 
