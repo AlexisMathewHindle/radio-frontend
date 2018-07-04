@@ -16,7 +16,7 @@ import {
 
 import { FilterPipe } from './filter.pipe';
 
-
+import { AppRouting } from './app.routing';
 import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -50,34 +50,6 @@ export function getAuthServiceConfigs() {
   return config;
 }
 
-const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/player',
-    pathMatch: 'full'
-  },
-  {
-    path: 'player',
-    component: PlayerComponent
-  },
-  {
-    path: 'shoutout',
-    component: ShoutoutComponent
-  },
-  {
-    path: 'search',
-    component: SearchComponent
-  },
-  {
-    path: 'admin',
-    component: AdminComponent,
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-  }
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -96,7 +68,6 @@ const routes: Routes = [
   ],
   imports: [
     HttpClientModule,
-    // HttpModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
@@ -104,10 +75,8 @@ const routes: Routes = [
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
     SocialLoginModule,
-    RouterModule.forRoot(
-      routes,
-      { enableTracing: false } // <-- debugging purposes only
-    )
+    AppRouting
+
   ],
   providers: [
     FunctionService,
