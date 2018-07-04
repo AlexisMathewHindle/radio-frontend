@@ -1,0 +1,74 @@
+@import '../../../variables.scss';
+
+.shoutout {
+
+  &__btn {
+    display: flex;
+    flex-direction: row;
+
+    .btn {
+      margin-right: 30px;
+      width: 150px;
+    }
+  }
+
+  &__container {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    height: calc(100% - 280px);
+    margin: 30px;
+    padding: 40px;
+    position: relative;
+
+    .btn {
+      margin-top: 30px;
+    }
+  }
+
+  &__date-time {
+    margin-top: 30px;
+
+    label {
+
+      input {
+        border-bottom: 1px solid $light-grey;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        box-sizing: border-box;
+        color: #333;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        outline: 0;
+        padding: 7px 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &__input {
+    border: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid $light-grey;
+
+    input[type="text"] {
+      border: 0;
+      font-size: 16px;
+      color: #333;
+      width: 100%;
+      box-sizing:
+      border-box;
+      letter-spacing: 1px;
+      margin-top: 10px;
+
+      &:focus {
+        outline-color: $white;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

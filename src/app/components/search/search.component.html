@@ -1,0 +1,22 @@
+<div class="search__container">
+
+  <div class="search__title">
+    <h2>Search for your music</h2>
+  </div>
+  <div class="search__input">
+    <input type="text" class="search__input-text" placeholder="Type and submit" #add [(ngModel)]="addInput">
+    <!-- <input type="text" placeholder="Type Here to Search Artists..." [(ngModel)]="searchStr" name="searchStr" (keyup)="searchMusic()">
+    <ul>
+      <li *ngFor="let item of characters | filter: searchText">
+        {{ item }}
+      </li>
+    </ul> -->
+  </div>
+
+
+  <input type="submit" class="btn btn__black btn__right" value="Search">
+
+  <div class="search__btn-container">
+    <button class="btn btn__black" (click)=addToPlaylist(add.value)>Add to playlist</button>
+  </div>
+</div>

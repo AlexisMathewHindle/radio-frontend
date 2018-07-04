@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+@import './variables.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow:hidden;
+  height: 100%;
+}
+
+.btn {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  outline: 0;
+
+  &__black {
+    background-color: $black;
+    border: 1px solid $black;
+    color: $white;
+  }
+
+  &__left {
+    float: left;
+  }
+
+  &__right {
+    float: right;
+  }
+
+  &__white {
+    background-color: $white;
+    border: 1px solid $black;
+    color: $black;
+  }
+}
+
+.active {
+  // top: 70px !important;
+  // visibility: visible !important;
+  // transition: 0.2s ease top;
+  // z-index: 100 !important;
+  align-items: center;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+}

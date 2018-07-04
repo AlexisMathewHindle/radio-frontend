@@ -1,0 +1,33 @@
+<div class="shoutout__container" id="content">
+  <div class="shoutout__title">
+    <h2>Shoutouts</h2>
+  </div>
+
+  <div class="shoutout__input">
+    <input type="text" placeholder="Type your announcement here" [(ngModel)]="shoutMessage" />
+  </div>
+
+  <div class="shoutout__input">
+    <input type="text" placeholder="Shoutout to - please enter their imagination email address" [(ngModel)]="shoutTo" />
+  </div>
+
+  <div class="shoutout__btn">
+    <input *ngIf="shoutOutDate == false" type="submit" class="btn btn__black btn__left" value="Shoutout now" (click)="shoutOutNow()">
+
+    <input type="submit" class="btn btn__black btn__left" value="Schedule for later" (click)="shoutOutLaterShow()">
+  </div>
+
+  <div class="shoutout__date-time" *ngIf="shoutOutDate == true">
+    <label>
+      Date & Time picker:
+        <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" [(ngModel)]="selectedTime">
+        <owl-date-time #dt></owl-date-time>
+    </label>
+
+    <input type="submit" class="btn btn__black btn__left" value="Shoutout" (click)="shoutOutLater()">
+  </div>
+
+
+  <button id="authorize-button" style="display: none;">Authorize</button>
+  <button id="signout-button" style="display: none;">Sign Out</button>
+</div>

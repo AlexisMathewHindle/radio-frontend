@@ -1,0 +1,77 @@
+@import '../../../variables.scss';
+
+.player {
+  &__container {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    height: calc(100% - 280px);
+    margin: 30px;
+    padding: 40px;
+    position: relative;
+
+    h2 {
+      height: 50px;
+      position: relative;
+      width: 100%;
+
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-bottom: 4px solid $brand_purple;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 10px;
+
+      }
+    }
+  }
+
+  &__music {
+
+    div:first-of-type {
+      padding-top: 0;
+    }
+
+    button {
+      margin-top: 40px;
+    }
+
+    &--item {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: -15px;
+
+      img {
+        height: 40px;
+        width: auto;
+      }
+    }
+
+  }
+
+  &__now-playing {
+
+  }
+
+  &__upcoming-show {
+
+
+
+  }
+
+  &__showlist {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    grid-gap: 20px;
+
+    span{
+      padding-top: 10px;
+    }
+  }
+}

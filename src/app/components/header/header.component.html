@@ -1,0 +1,28 @@
+<header>
+
+  <div class="header__links header__links--logo">
+    <img src="assets/images/imagination_logo.png" alt="Imagination logo">
+    <h2>Radio</h2>
+  </div>
+
+  <div class="header__links header__links--clock">
+    <app-clock></app-clock>
+  </div>
+
+   <div class="header__links">
+
+     <button class="btn btn__black" (click)="socialSignIn('google')">
+       Sign in with Google
+     </button>
+
+     <button routerLink="/admin" class="btn btn__black"  *ngIf="!showAdmin == true">
+       Admin
+     </button>
+
+   </div>
+</header>
+
+<div class="header__now-playing">
+  <h2>Now playing</h2>
+  <img src="assets/images/pause.svg" alt="pause" (click)="pausePlaying()"/>
+</div>

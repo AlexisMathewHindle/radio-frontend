@@ -1,0 +1,26 @@
+<div class="login">
+  <div class="login__container">
+    <div class="login__title">
+      <h2>Login</h2>
+    </div>
+
+    <div class="login__item">
+      <label for="user">Username:</label>
+      <input class="login__user" type="text" id="user" [(ngModel)]="inputUser"/>
+    </div>
+
+    <div class="login__item">
+      <label for="password">Password</label>
+      <input class="login__password" type="password" id="password" [(ngModel)]="inputPassword"/>
+    </div>
+
+    <div class="login__item">
+      <input type="submit" class="btn btn__black btn__left" value="Login" (click)="login()">
+    </div>
+
+    <div class="login__item">
+      <p class="login__error">{{ errorMessage }}</p>
+    </div>
+
+  </div>
+</div>

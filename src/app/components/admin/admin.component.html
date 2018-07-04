@@ -1,0 +1,36 @@
+<div class="admin__container">
+  <div class="admin__title">
+    <h2>Feature activation</h2>
+  </div>
+
+  <div class="admin__activate-container">
+    <div class="admin__activate-item">
+      <label for="weather">Activate weather reporting
+        <input type="checkbox" id="weather" value="weather" [(ngModel)]="weatherActive"/>
+      </label>
+    </div>
+
+    <div class="admin__activate-item">
+      <label for="clock">Activate talking clock
+        <input type="checkbox" id="clock" value="clock" [(ngModel)]="clockActive"/>
+      </label>
+    </div>
+
+    <div class="admin__activate-item">
+      <label for="shout-outs">Activate shout outs
+        <input type="checkbox" id="shout-outs" value="shout-outs" [(ngModel)]="shoutActive"/>
+      </label>
+    </div>
+
+    <div class="admin__activate-item">
+      <label for="fake-news">Activate fake news
+        <input type="checkbox" id="fake-news" value="fake news" [(ngModel)]="newsActive" />
+      </label>
+    </div>
+
+    <div class="admin__activate-item">
+      <input class="btn btn__black btn__left" type="submit" value="Activate features" (click)="saveFeatures()" />
+    </div>
+  </div>
+
+</div>

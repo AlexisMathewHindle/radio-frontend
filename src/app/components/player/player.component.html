@@ -1,0 +1,43 @@
+<div class="player__container">
+  <!-- <div class="player__talking-clock"></div>  -->
+  <div class="player__now-playing">
+    <h2>Now on air</h2>
+  </div>
+  <div class="player__upcoming-show">
+    <h2>Upcoming shows</h2>
+    <div class="player__showlist" *ngFor="let item of showlist">
+      <span>
+        {{ item.showTitle }}
+      </span>
+      <span>
+        {{ item.showStart }}
+      </span>
+      <span>
+        {{ item.showFinish }}
+      </span>
+    </div>
+
+
+
+  </div>
+  <div class="player__music">
+    <h2>Tunes to be played</h2>
+    <div class="player__music--item" *ngFor="let item of artist">
+      <span>
+        {{ item.artistTitle }}
+      </span>
+      <span (click)="deleteTrack()">
+        <img src="assets/images/trash.svg" alt="Delete">
+      </span>
+    </div>
+
+    <!-- <button class="btn btn__black" (click)="deleteTrack()">
+      Delete from playlist
+    </button> -->
+
+  </div>
+
+  <div class="player__news">
+    <app-news></app-news>
+  </div>
+</div>

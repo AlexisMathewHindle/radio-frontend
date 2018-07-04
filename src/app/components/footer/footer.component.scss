@@ -1,0 +1,13 @@
+@import '../../../variables.scss';
+
+footer {
+  color: #dedede;
+  // background: $light-grey;
+  border-top: 4px solid $brand_green;
+  bottom: 0;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+}
