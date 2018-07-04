@@ -14,9 +14,7 @@ export class AppComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  ngOnInit() {
-      console.log(this.router.url);
-  }
+  ngOnInit() {}
 
   getState(outlet) {
     return outlet.activatedRouteData.state;
